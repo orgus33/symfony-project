@@ -9,13 +9,18 @@ use Symfony\Component\Routing\Annotation\Route;
 class ConferenceController extends AbstractController
 {
     /**
-     * @Route("/conference", name="conference")
+     * @Route("/conference", name="homepage")
      */
     public function index(): Response
     {
-        return $this->json([
-            'message' => 'Welcome to your new controller!',
-            'path' => 'src/Controller/ConferenceController.php',
-        ]);
+        return new Response(
+            <<<EOF
+<html>
+    <body>
+        <img src="../images/under_construction.gif" />
+    </body>
+</html>
+EOF
+        );
     }
 }
