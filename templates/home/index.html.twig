@@ -1,20 +1,7 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-    <ul>
 
-    {% for user in users %}
-        <li>
-            {{ user.name }} a {{ user.age }} ans.
-            <br>
-            {% if user.age >= 18 %}
-                Il est majeur
-            {% else %}
-                Il est mineur
-            {% endif %}
-        </li>
-        <br>
-    {% endfor %}
-</ul>
+    {{ form(form) }}
 
 {% endblock %}
